@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 2.8.7)
-project(libmill C)
 
 include(CheckSymbolExists)
 include(CheckFunctionExists)
@@ -64,3 +63,4 @@ foreach(perf_file IN LISTS perf_files)
     OUTPUT_NAME ${perf_name})
   target_link_libraries(perf_${perf_name} mill)
 endforeach()
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/LIB)
